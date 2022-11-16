@@ -3,7 +3,6 @@
 .comment-container {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	width: 90%;
 }
 .comment-container .comment {
@@ -168,28 +167,34 @@
 	color: var(--soft-red);
 }
 
-.reply-container {
+.comment-container  .reply-container {
 	display: flex;
 	align-items: center;
+	margin-left: 40px;
+	width: 100%;
 	flex-direction: column;
-	padding-left: 15px;
-	margin-left: 15px;
 	gap: 15px;
 }
-.comment-container {
+.comment-container  .reply-container .comment-container {
 	width: 100%;
 }
-.comment-container .comment {
+.comment-container  .reply-container .comment-container .comment {
 	animation: come-in 1.5s ease-in-out;
 }
-.comment-container .reply-comment {
+.comment-container .reply-container .comment-container .reply-comment {
 	display: flex;
 	justify-content: center;
+	margin-left: 20px;
 }
-.comment-container .reply-comment .add-comment {
+.comment-container .reply-container .comment-container .reply-comment .add-comment{
+	margin-left: 20px;
+}
+
+.comment-container .add-comment {
 	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
+	align-self: center;
 	gap: 20px;
 	width: 60%;
 	padding: 15px;

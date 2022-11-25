@@ -83,21 +83,31 @@ const Reply = ({
           />
 
           {commentContent()}
-          {editing && (
-            <button className="update-btn" onClick={updateComment}>
-              update
+          
+        </div>
+        <div
+          style={{
+              display:"flex",
+              justifyContent:"space-between",
+              alignItems:"center",
+          }}
+        >
+          {!editing&&(
+            <CommentVotes
+              vote={vote}
+              setVoted={setVoted}
+              score={score}
+              setScore={setScore}
+              updateScore={updateScore}
+              commentData={commentData}
+              type={type}
+            />
+          )}
+          {editing&&(
+            <button className="update-btn" onClick={updateComment}>update
             </button>
           )}
         </div>
-        <CommentVotes
-          vote={vote}
-          setVoted={setVoted}
-          score={score}
-          setScore={setScore}
-          updateScore={updateScore}
-          commentData={commentData}
-          type={type}
-        />
       </div>
 
       {replying && (

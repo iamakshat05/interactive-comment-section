@@ -192,6 +192,7 @@
 
 .comment-container .add-comment {
 	margin-top: 15px;
+	margin-left: 75px;
 	display: flex;
 	flex-direction: column;
 	align-self: center;

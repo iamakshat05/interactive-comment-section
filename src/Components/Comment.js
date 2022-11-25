@@ -71,21 +71,32 @@ const Comment = ({
 							}}
 						/>
 					)}
-					{editing && (
+				</div>
+				<div
+					style={{
+						display:"flex",
+						justifyContent:"space-between",
+						alignItems:"center",
+						position:"relative",
+					}}
+				>
+					{!editing &&(
+						<CommentVotes
+							vote={vote}
+							setVoted={setVoted}
+							score={score}
+							setScore={setScore}
+							updateScore={updateScore}
+							commentData={commentData}
+							type={'comments'}
+						/>
+					)}
+					{editing &&(
 						<button className='update-btn' onClick={updateComment}>
 							update
 						</button>
 					)}
 				</div>
-				<CommentVotes
-					vote={vote}
-					setVoted={setVoted}
-					score={score}
-					setScore={setScore}
-					updateScore={updateScore}
-					commentData={commentData}
-					type={'comments'}
-				/>
 			</div>
 
 			{replying && (
